@@ -25,6 +25,13 @@ io.on("connection", socket => {
       return callback("Name and room name are required.");
     }
 
+    if (
+      users.getUserList(params.room).filter(user => user === params.name)[0] ===
+      params.name
+    ) {
+      return callback("Name already in use. Please choose a different name.");
+    }
+
     socket.join(params.room);
     users.removeUser(socket.id);
     users.addUser(socket.id, params.name, params.room);

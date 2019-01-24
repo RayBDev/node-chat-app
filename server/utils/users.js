@@ -1,16 +1,3 @@
-[
-  {
-    id: "dsfhsdhfdfhhgr",
-    name: "Ray",
-    room: "The Office fans"
-  }
-];
-
-// addUser(id, name, room)
-// removeUser(id)
-// getUser(id)
-// getUserList(room)
-
 class Users {
   constructor() {
     this.users = [];
@@ -23,7 +10,6 @@ class Users {
   }
 
   removeUser(id) {
-    // return user that was removed
     let removedUser = this.getUser(id);
 
     if (removedUser) {
@@ -45,18 +31,3 @@ class Users {
 }
 
 module.exports = { Users };
-
-// class Person {
-//   constructor(name, age) {
-//     this.name = name;
-//     this.age = age;
-//   }
-
-//   getUserDescription() {
-//     return `${this.name} is ${this.age} year(s) old`;
-//   }
-// }
-
-// let me = new Person("Ray", 34);
-// let description = me.getUserDescription();
-// console.log(description);
